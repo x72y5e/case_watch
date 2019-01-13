@@ -52,7 +52,7 @@ def send_email(list_of_urls):
     server = smtplib.SMTP(server[0], server[1])
     try:
         server.starttls()
-        server.login(frm, pwd)  #"cywGTauk3LT4JC")
+        server.login(frm, pwd)
         msg = MIMEMultipart()
         msg['From'], msg['To'], msg['Subject'] = frm, to, sbj
         msg.attach(MIMEText(list_of_urls, "plain"))
