@@ -16,6 +16,7 @@ def get_extracts(text):
     pattern = re.compile(".*\[\d\d\d\d\].*")  # TODO: only capture a few sentences
     return re.findall(pattern, text)
 
+
 def score_case(text):
     try:
         with open("config.json", "r") as f:
